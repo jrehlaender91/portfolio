@@ -4,7 +4,7 @@ const channels = [
   { label: 'Email', value: 'jrehlaender91@gmail.com', href: 'mailto:jrehlaender91@gmail.com' },
   { label: 'LinkedIn', value: 'in/jorgerehlaender', href: 'https://www.linkedin.com/in/jrehlaender/' },
   { label: 'GitHub', value: '@jrehlaender', href: 'https://github.com/jrehlaender91/' },
-  { label: 'Location', value: 'Monterrey · Remote', href: null },
+  { label: 'Location', value: 'Mexico City · Remote', href: null },
 ]
 
 export default function Contact() {
