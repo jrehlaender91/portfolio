@@ -1,0 +1,28 @@
+.footer {
+  padding-block: 2rem 3rem;
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.footer__mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ink);
+}
+.footer__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}

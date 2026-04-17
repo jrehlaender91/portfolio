@@ -1,0 +1,92 @@
+.work__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+.work__item {
+  border-bottom: 1px solid var(--rule);
+}
+.work__link {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  gap: 1.25rem;
+  padding: 2rem 0;
+  align-items: start;
+  position: relative;
+  transition: padding 300ms cubic-bezier(.2,.65,.2,1);
+}
+.work__link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+.work__link:hover { padding-left: 1.25rem; padding-right: 1.25rem; }
+.work__link:hover::before { opacity: 1; }
+
+.work__index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding-top: 0.35rem;
+  letter-spacing: 0.1em;
+}
+.work__title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.work__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.75rem);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.work__year {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.work__blurb {
+  margin-top: 0.65rem;
+  max-width: 62ch;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.work__tags {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+  flex-wrap: wrap;
+}
+.work__tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--ink-soft);
+}
+.work__arrow {
+  align-self: start;
+  padding-top: 0.4rem;
+  color: var(--ink);
+  transition: transform 300ms cubic-bezier(.2,.65,.2,1);
+}
+.work__link:hover .work__arrow { transform: translate(4px, -4px); color: var(--accent-ink); }
+
+@media (max-width: 720px) {
+  .work__link { grid-template-columns: 2.25rem 1fr auto; gap: 0.75rem; padding: 1.5rem 0; }
+  .work__link:hover { padding-left: 0.5rem; padding-right: 0.5rem; }
+}
