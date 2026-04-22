@@ -1,14 +1,14 @@
 /* ---------- Design tokens ---------- */
 :root {
-  /* palette — paper/ink with a single bold accent */
-  --ink: #0F0F0E;
-  --ink-soft: #1C1C1A;
-  --paper: #F6F3EC;
-  --paper-soft: #EDE7D9;
-  --muted: #6B6B66;
-  --rule: rgba(15, 15, 14, 0.12);
-  --accent: #E8C547;        /* warm amber — Music/Acoustics feel */
-  --accent-ink: #8A6A00;
+  /* palette — paper/ink with a single bold plum accent */
+  --ink: #130D12;
+  --ink-soft: #231A21;
+  --paper: #F3EFEE;
+  --paper-soft: #E7E0DE;
+  --muted: #6B6569;
+  --rule: rgba(19, 13, 18, 0.12);
+  --accent: #8A3A8E;        /* deep plum — intellectual, concert-hall */
+  --accent-ink: #511A54;
   --signal: #2E5BFF;        /* rare electric accent — Technology */
 
   /* type */
@@ -34,12 +34,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #F2EFE7;
-    --ink-soft: #D8D4C7;
-    --paper: #0E0E0D;
-    --paper-soft: #161614;
-    --muted: #8E8D86;
-    --rule: rgba(242, 239, 231, 0.12);
+    --ink: #EFE8ED;
+    --ink-soft: #D0C6CD;
+    --paper: #0D080C;
+    --paper-soft: #160F14;
+    --muted: #908A8F;
+    --rule: rgba(239, 232, 237, 0.12);
   }
 }
 
