@@ -7,6 +7,7 @@ import Experience from './components/Experience.jsx'
 import Writing from './components/Writing.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
+import ThemeExplorer from './components/ThemeExplorer.jsx'
 
 export default function App() {
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ThemeExplorer />
     </>
   )
 }
