@@ -1,6 +1,8 @@
+import { useT } from '../i18n/I18nProvider.jsx'
 import './Footer.css'
 
 export default function Footer() {
+  const { t } = useT()
   return (
     <footer className="footer">
       <div className="wrap footer__inner">
@@ -10,7 +12,7 @@ export default function Footer() {
           <span>Jorge Rehlaender</span>
         </p>
         <p className="footer__meta">
-          <span>Built in React · crafted with care</span>
+          <span>{t.footer.built}</span>
           <span aria-hidden="true">·</span>
           <span>© {new Date().getFullYear()}</span>
         </p>

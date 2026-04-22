@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
+import { useT } from '../i18n/I18nProvider.jsx'
 import './Hero.css'
 
-const disciplines = ['Music', 'Acoustics', 'Education', 'Technology']
-
 export default function Hero() {
+  const { t } = useT()
   const canvasRef = useRef(null)
   const pointer = useRef({ x: 0.5, y: 0.5, active: false })
 
@@ -12,7 +12,7 @@ export default function Hero() {
     if (!canvas) return
     const ctx = canvas.getContext('2d')
     let raf = 0
-    let t = 0
+    let time = 0
     const dpr = Math.min(window.devicePixelRatio || 1, 2)
 
     const resize = () => {
@@ -48,7 +48,7 @@ export default function Hero() {
         ctx.beginPath()
         const amp = 18 + i * 14 + (pointer.current.active ? (py - 0.5) * 40 : 0)
         const freq = 0.006 + i * 0.0018
-        const phase = t * (0.5 + i * 0.25) + (pointer.current.active ? (px - 0.5) * 3 : 0)
+        const phase = time * (0.5 + i * 0.25) + (pointer.current.active ? (px - 0.5) * 3 : 0)
         const yMid = h * 0.5 + (i - layers / 2) * 6
 
         for (let x = -10; x <= w + 10; x += 2) {
@@ -65,7 +65,7 @@ export default function Hero() {
         ctx.stroke()
       }
 
-      if (!prefersReduced) t += 0.012
+      if (!prefersReduced) time += 0.012
       raf = requestAnimationFrame(render)
     }
     render()
@@ -77,28 +77,37 @@ export default function Hero() {
     }
   }, [])
 
+  const h = t.hero
+  // Weave the emphasized words into the lede using ledeJoiners between them.
+  const ledeParts = h.ledeWords.map((w, i) => (
+    <span key={w}>
+      <em>{w}</em>
+      {i < h.ledeJoiners.length ? h.ledeJoiners[i] : ''}
+    </span>
+  ))
+
   return (
     <section className="hero" id="top">
       <canvas ref={canvasRef} className="hero__canvas" aria-hidden="true" />
       <div className="wrap hero__inner">
         <p className="eyebrow hero__eyebrow">
           <span className="hero__pulse" aria-hidden="true" />
-          Portfolio · 2026
+          {h.eyebrow}
         </p>
 
         <h1 className="display hero__title">
-          <span>Jorge</span>
-          <span className="hero__title-accent">Rehlaender</span>
+          <span>{h.firstName}</span>
+          <span className="hero__title-accent">{h.lastName}</span>
         </h1>
 
         <p className="lede hero__lede">
-          An interdisciplinary professional working at the intersection of
-          <em> sound</em>, <em>space</em>, <em>learning</em>, and <em>systems</em> —
-          building experiences where each discipline sharpens the others.
+          {h.ledeBefore}
+          {ledeParts}
+          {h.ledeAfter}
         </p>
 
         <ul className="hero__disciplines" aria-label="Disciplines">
-          {disciplines.map((d, i) => (
+          {h.disciplines.map((d, i) => (
             <li key={d} style={{ '--i': i }}>
               <span className="hero__num">{String(i + 1).padStart(2, '0')}</span>
               {d}
@@ -108,18 +117,18 @@ export default function Hero() {
 
         <div className="hero__cta">
           <a href="#work" className="btn btn--primary">
-            See selected work
+            {h.ctaPrimary}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
-          <a href="#contact" className="btn btn--ghost">Get in touch</a>
+          <a href="#contact" className="btn btn--ghost">{h.ctaGhost}</a>
         </div>
 
         <div className="hero__meta">
-          <span className="kbd">scroll</span>
+          <span className="kbd">{h.scroll}</span>
           <span className="hero__meta-line" aria-hidden="true" />
-          <span>Mexico City / Remote</span>
+          <span>{h.location}</span>
         </div>
       </div>
     </section>
@@ -128,9 +137,7 @@ export default function Hero() {
 
 function hexToRgba(hex, alpha) {
   const v = hex.replace('#', '')
-  const n = v.length === 3
-    ? v.split('').map((c) => c + c).join('')
-    : v
+  const n = v.length === 3 ? v.split('').map((c) => c + c).join('') : v
   const r = parseInt(n.slice(0, 2), 16)
   const g = parseInt(n.slice(2, 4), 16)
   const b = parseInt(n.slice(4, 6), 16)

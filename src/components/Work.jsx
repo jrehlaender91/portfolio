@@ -1,58 +1,23 @@
+import { useT } from '../i18n/I18nProvider.jsx'
 import './Work.css'
 
-const projects = [
-  {
-    index: '01',
-    year: '2025',
-    title: 'Room, Measured',
-    tags: ['Acoustics', 'Technology'],
-    blurb:
-      'A browser tool that turns a phone-captured sweep into a readable impulse response — designed for musicians, not engineers.',
-    meta: 'Case study',
-  },
-  {
-    index: '02',
-    year: '2024',
-    title: 'Ensemble Listening',
-    tags: ['Music', 'Education'],
-    blurb:
-      'A 12-week curriculum teaching ensemble awareness through listening exercises, recording review, and structured peer feedback.',
-    meta: 'Curriculum',
-  },
-  {
-    index: '03',
-    year: '2024',
-    title: 'Field School',
-    tags: ['Education', 'Acoustics'],
-    blurb:
-      'A portable acoustics lab for secondary schools — measurement hardware, lesson plans, and a scoring rubric that teachers actually use.',
-    meta: 'Program',
-  },
-  {
-    index: '04',
-    year: '2023',
-    title: 'Signal Practice',
-    tags: ['Music', 'Technology'],
-    blurb:
-      'A metronome and DSP sandbox built for rehearsal rooms with poor acoustics — stable, readable, and never in the way.',
-    meta: 'Product',
-  },
-]
-
 export default function Work() {
+  const { t } = useT()
+  const w = t.work
+
   return (
     <section id="work" className="work">
       <div className="wrap">
         <div className="section-head reveal">
-          <span className="eyebrow">02 — Selected work</span>
+          <span className="eyebrow">{w.eyebrow}</span>
           <h2>
-            Projects where two disciplines
-            <br /> <em>meet in the middle.</em>
+            {w.titleA}
+            <br /> <em>{w.titleB}</em>
           </h2>
         </div>
 
-        <ol className="work__list" aria-label="Selected projects">
-          {projects.map((p, i) => (
+        <ol className="work__list" aria-label={w.listLabel}>
+          {w.projects.map((p, i) => (
             <li key={p.index} className="work__item reveal" style={{ transitionDelay: `${i * 60}ms` }}>
               <a href="#" className="work__link" aria-label={`${p.title} — ${p.meta}`}>
                 <span className="work__index">{p.index}</span>
@@ -63,8 +28,8 @@ export default function Work() {
                   </span>
                   <p className="work__blurb">{p.blurb}</p>
                   <span className="work__tags">
-                    {p.tags.map((t) => (
-                      <span key={t} className="work__tag">{t}</span>
+                    {p.tags.map((tag) => (
+                      <span key={tag} className="work__tag">{tag}</span>
                     ))}
                   </span>
                 </span>
