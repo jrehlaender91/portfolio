@@ -47,8 +47,6 @@ export const translations = {
       titleB: 'one question.',
       lede:
         'My work starts from a question that doesn’t change: how sound builds experience. I answer it by composing music under my own name, designing acoustic spaces through Vacío, and teaching the next generation of musicians at Tecnológico de Monterrey.',
-      body:
-        'I run Vacío (acoustic design), teach at Tecnológico de Monterrey, and have led digital marketing for B2B consulting and travel brands. Melómano at heart: the craft comes from listening first, and building only what makes the work better.',
       pillars: [
         {
           key: 'music',
@@ -255,8 +253,6 @@ export const translations = {
       titleB: 'una sola pregunta.',
       lede:
         'Mi trabajo parte de una pregunta que no cambia: cómo el sonido construye experiencia. La respondo componiendo música bajo mi propio nombre, diseñando espacios acústicos a través de Vacío, y formando a la siguiente generación de músicos en el Tec de Monterrey.',
-      body:
-        'Dirijo Vacío (diseño acústico), doy clase en el Tecnológico de Monterrey y he liderado marketing digital para consultoría B2B y marcas de viajes. Melómano de cabo a rabo: el oficio empieza por escuchar, y solo construyo lo que mejora el trabajo.',
       pillars: [
         {
           key: 'music',

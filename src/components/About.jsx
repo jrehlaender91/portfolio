@@ -20,7 +20,6 @@ export default function About() {
         <div className="about__grid">
           <div className="about__lede reveal">
             <p className="lede">{a.lede}</p>
-            <p className="about__body">{a.body}</p>
           </div>
 
           <ul className="about__pillars">
