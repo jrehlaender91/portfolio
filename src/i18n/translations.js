@@ -10,7 +10,7 @@ export const translations = {
       htmlLang: 'en',
       title: 'Jorge Rehlaender — Interdisciplinary Professional',
       description:
-        'Jorge Rehlaender — interdisciplinary professional working across music, acoustics, education, and technology.',
+        'Jorge Rehlaender — interdisciplinary professional working with listening — as a composer, acoustic designer, and educator.',
     },
     nav: {
       home: 'Home',
@@ -30,12 +30,12 @@ export const translations = {
       firstName: 'Jorge',
       lastName: 'Rehlaender',
       // Segments for the lede: plain text vs. emphasized words.
-      ledeBefore: 'An interdisciplinary professional working at the intersection of ',
-      ledeWords: ['sound', 'space', 'learning', 'systems'],
-      ledeJoiners: [', ', ', ', ', and '],
-      ledeAfter:
-        ' — building experiences where each discipline sharpens the others.',
-      disciplines: ['Music', 'Acoustics', 'Education', 'Technology'],
+      ledeBefore: 'I work with ',
+      ledeWords: ['listening', 'composer', 'acoustic designer', 'educator'],
+      // First joiner introduces the three roles; the rest separate them.
+      ledeJoiners: [' — as a ', ', as an ', ', and as an '],
+      ledeAfter: '.',
+      disciplines: ['Composition', 'Acoustics', 'Teaching'],
       ctaPrimary: 'See selected work',
       ctaGhost: 'Get in touch',
       scroll: 'scroll',
@@ -43,17 +43,17 @@ export const translations = {
     },
     about: {
       eyebrow: '01 — About',
-      titleA: 'Four disciplines,',
-      titleB: 'one practice.',
+      titleA: 'Three practices,',
+      titleB: 'one question.',
       lede:
-        'I work where sound, space, learning, and systems overlap. My background sits between music, marketing, and acoustic design for art and entertainment — wherever those fields meet is where I keep finding the interesting problems.',
+        'My work starts from a question that doesn’t change: how sound builds experience. I answer it by composing music under my own name, designing acoustic spaces through Vacío, and teaching the next generation of musicians at Tecnológico de Monterrey.',
       body:
         'I run Vacío (acoustic design), teach at Tecnológico de Monterrey, and have led digital marketing for B2B consulting and travel brands. Melómano at heart: the craft comes from listening first, and building only what makes the work better.',
       pillars: [
         {
           key: 'music',
-          tag: 'Music',
-          title: 'Performance & composition',
+          tag: 'Composition',
+          title: 'Composition & production',
           body: 'Digital Music Production engineer; years of listening and making shape how I teach, design, and market around sound.',
         },
         {
@@ -64,15 +64,9 @@ export const translations = {
         },
         {
           key: 'education',
-          tag: 'Education',
+          tag: 'Teaching',
           title: 'Teaching & curriculum',
           body: 'Faculty at Tec de Monterrey — I design blocks on sonic creativity and songwriting, with consistently +9.0 student satisfaction.',
-        },
-        {
-          key: 'technology',
-          tag: 'Technology',
-          title: 'Tools that serve the craft',
-          body: 'Digital marketing, web, and analytics — from B2B growth at Sintec to this site. Tech when it makes the work better, never as spectacle.',
         },
       ],
     },
@@ -82,6 +76,14 @@ export const translations = {
       titleB: 'meet in the middle.',
       listLabel: 'Selected projects',
       projects: [
+        {
+          index: '00',
+          year: '2020 — Now',
+          title: 'Rehlaender',
+          tags: ['Music', 'Composition'],
+          blurb: 'A composition and production project under my own name — with an active publishing deal and music in distribution. The place where everything I know about sound becomes personal.',
+          meta: 'Catalog',
+        },
         {
           index: '01',
           year: '2015 — Now',
@@ -198,7 +200,7 @@ export const translations = {
       eyebrow: '06 — Contact',
       titleA: 'Let\u2019s build something',
       titleB: 'worth listening to.',
-      sub: 'Teaching, consulting, acoustic design, or a project that crosses two of my disciplines — I\u2019m open to conversations. No form, just a direct line.',
+      sub: 'Composition, acoustic design, teaching — or any project that starts by listening. I\u2019m open to conversations. No form, just a direct line.',
       cta: 'Write me',
       channels: [
         { label: 'Email', value: 'jrehlaender91@gmail.com', href: 'mailto:jrehlaender91@gmail.com' },
@@ -217,7 +219,7 @@ export const translations = {
       htmlLang: 'es',
       title: 'Jorge Rehlaender — Profesional Interdisciplinario',
       description:
-        'Jorge Rehlaender — profesional interdisciplinario que trabaja entre música, acústica, educación y tecnología.',
+        'Jorge Rehlaender — profesional interdisciplinario que trabaja con la escucha — como compositor, diseñador acústico y formador.',
     },
     nav: {
       home: 'Inicio',
@@ -236,13 +238,12 @@ export const translations = {
       eyebrow: 'Portafolio · 2026',
       firstName: 'Jorge',
       lastName: 'Rehlaender',
-      ledeBefore: 'Un profesional interdisciplinario que trabaja en la intersección del ',
-      ledeWords: ['sonido', 'espacio', 'aprendizaje', 'sistemas'],
-      // Each noun gets its own article; Spanish joins the last item with "y" and no comma.
-      ledeJoiners: [', el ', ', el ', ' y los '],
-      ledeAfter:
-        ' — construyendo experiencias donde cada disciplina afila a las demás.',
-      disciplines: ['Música', 'Acústica', 'Educación', 'Tecnología'],
+      ledeBefore: 'Trabajo con la ',
+      ledeWords: ['escucha', 'compositor', 'diseñador acústico', 'formador'],
+      // First joiner introduces the three roles; the rest separate them.
+      ledeJoiners: [' — como ', ', como ', ' y como '],
+      ledeAfter: '.',
+      disciplines: ['Composición', 'Acústica', 'Formación'],
       ctaPrimary: 'Ver trabajo seleccionado',
       ctaGhost: 'Hablemos',
       scroll: 'desliza',
@@ -250,17 +251,17 @@ export const translations = {
     },
     about: {
       eyebrow: '01 — Perfil',
-      titleA: 'Cuatro disciplinas,',
-      titleB: 'una sola práctica.',
+      titleA: 'Tres prácticas,',
+      titleB: 'una sola pregunta.',
       lede:
-        'Trabajo donde se cruzan el sonido, el espacio, el aprendizaje y los sistemas. Mi formación vive entre la música, la mercadotecnia y el diseño acústico para el arte y el entretenimiento — ahí es donde siempre encuentro los problemas interesantes.',
+        'Mi trabajo parte de una pregunta que no cambia: cómo el sonido construye experiencia. La respondo componiendo música bajo mi propio nombre, diseñando espacios acústicos a través de Vacío, y formando a la siguiente generación de músicos en el Tec de Monterrey.',
       body:
         'Dirijo Vacío (diseño acústico), doy clase en el Tecnológico de Monterrey y he liderado marketing digital para consultoría B2B y marcas de viajes. Melómano de cabo a rabo: el oficio empieza por escuchar, y solo construyo lo que mejora el trabajo.',
       pillars: [
         {
           key: 'music',
-          tag: 'Música',
-          title: 'Interpretación y composición',
+          tag: 'Composición',
+          title: 'Composición y producción',
           body: 'Ingeniero en Producción Musical Digital; años de escuchar y hacer moldean cómo enseño, diseño y comunico alrededor del sonido.',
         },
         {
@@ -271,15 +272,9 @@ export const translations = {
         },
         {
           key: 'education',
-          tag: 'Educación',
-          title: 'Enseñanza y currículo',
+          tag: 'Formación',
+          title: 'Formación y currículo',
           body: 'Profesor de cátedra en el Tec de Monterrey — diseño bloques de Creatividad Sonora y Análisis y Creación de Canciones con evaluación +9.0.',
-        },
-        {
-          key: 'technology',
-          tag: 'Tecnología',
-          title: 'Herramientas al servicio del oficio',
-          body: 'Marketing digital, web y analítica — del crecimiento B2B en Sintec a este sitio. Tecnología cuando mejora el trabajo, nunca como espectáculo.',
         },
       ],
     },
@@ -289,6 +284,14 @@ export const translations = {
       titleB: 'se encuentran a medio camino.',
       listLabel: 'Proyectos seleccionados',
       projects: [
+        {
+          index: '00',
+          year: '2020 — Hoy',
+          title: 'Rehlaender',
+          tags: ['Música', 'Composición'],
+          blurb: 'Proyecto de composición y producción bajo mi propio nombre — con deal de publishing activo y música distribuida. El lugar donde todo lo que sé sobre el sonido se vuelve personal.',
+          meta: 'Catálogo',
+        },
         {
           index: '01',
           year: '2015 — Hoy',
@@ -405,7 +408,7 @@ export const translations = {
       eyebrow: '06 — Contacto',
       titleA: 'Construyamos algo',
       titleB: 'que valga la pena escuchar.',
-      sub: 'Docencia, consultoría, diseño acústico, o un proyecto que cruce dos de mis disciplinas — estoy abierto a conversaciones. Sin formulario, línea directa.',
+      sub: 'Composición, diseño acústico, docencia — o cualquier proyecto que empiece por escuchar. Estoy abierto a conversaciones. Sin formulario, línea directa.',
       cta: 'Escríbeme',
       channels: [
         { label: 'Correo', value: 'jrehlaender91@gmail.com', href: 'mailto:jrehlaender91@gmail.com' },
